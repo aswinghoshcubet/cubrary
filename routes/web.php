@@ -22,3 +22,6 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+
+Route::resource('courses', App\Http\Controllers\CourseController::class)->only('index', 'store');
